@@ -1,18 +1,20 @@
 defmodule HashVsPatterns do
   @moduledoc """
-  Documentation for HashVsPatterns.
+  Runs the benchmarks for different implementations
   """
 
-  @doc """
-  Hello world.
+  @planets [:mercury, :venus, :earth, :mars, :jupiter, :saturn, :uranus, :neptune]
 
-  ## Examples
+  def benchmark do
+    Benchee.run(%{
+      "With patterns" => benchmark_runner(WithPatterns),
+      "With hash" => benchmark_runner(WithHash),
+    })
+  end
 
-      iex> HashVsPatterns.hello
-      :world
-
-  """
-  def hello do
-    :world
+  defp benchmark_runner(module) do
+    fn ->
+      for planet <- @planets, do: module.age_on(planet, 901_876_382)
+    end
   end
 end
