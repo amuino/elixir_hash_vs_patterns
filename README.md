@@ -1,19 +1,7 @@
 # HashVsPatterns
 
-**TODO: Add description**
+After completing the [Space Age exercise](http://exercism.io/submissions/9553eaebde824a14897e8ba0e6ffdf1b)
+in two different ways (the "ruby one" with a hash and the "pattern matching" one) I was left
+wondering which one would be faster / better.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `hash_vs_patterns` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [{:hash_vs_patterns, "~> 0.1.0"}]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/hash_vs_patterns](https://hexdocs.pm/hash_vs_patterns).
-
+This repo is for exploring that.
