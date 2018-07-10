@@ -2,7 +2,7 @@ defmodule WithHash do
   @type planet :: :mercury | :venus | :earth | :mars | :jupiter | :saturn | :uranus | :neptune
 
   @earth_year 31_557_600
-  @plantet_factors %{
+  @planet_factors %{
     earth: 1,
     mercury: 0.2408467,
     venus: 0.61519726,
@@ -19,6 +19,6 @@ defmodule WithHash do
   """
   @spec age_on(planet, pos_integer) :: float
   def age_on(planet, seconds) do
-    seconds / @earth_year / @plantet_factors[planet]
+    seconds / @earth_year / @planet_factors[planet]
   end
 end
