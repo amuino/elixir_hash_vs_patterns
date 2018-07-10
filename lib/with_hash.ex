@@ -1,8 +1,7 @@
 defmodule WithHash do
-  @type planet :: :mercury | :venus | :earth | :mars | :jupiter
-                | :saturn | :uranus | :neptune
+  @type planet :: :mercury | :venus | :earth | :mars | :jupiter | :saturn | :uranus | :neptune
 
-  @earth_year 31557600
+  @earth_year 31_557_600
   @plantet_factors %{
     earth: 1,
     mercury: 0.2408467,
@@ -12,7 +11,7 @@ defmodule WithHash do
     saturn: 29.447498,
     uranus: 84.016846,
     neptune: 164.79132
-}
+  }
 
   @doc """
   Return the number of years a person that has lived for 'seconds' seconds is
@@ -20,6 +19,6 @@ defmodule WithHash do
   """
   @spec age_on(planet, pos_integer) :: float
   def age_on(planet, seconds) do
-    (seconds / @earth_year) / @plantet_factors[planet]
+    seconds / @earth_year / @plantet_factors[planet]
   end
 end

@@ -9,7 +9,7 @@ defmodule HashVsPatterns do
     Benchee.run(%{
       "With patterns" => benchmark_runner(WithPatterns),
       "With hash" => benchmark_runner(WithHash),
-      "With patterns and macros" => benchmark_runner(WithPatternsAndMacros),
+      "With patterns and macros" => benchmark_runner(WithPatternsAndMacros)
     })
   end
 
