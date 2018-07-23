@@ -11,7 +11,8 @@ defmodule HashVsPatterns do
         "With patterns" => benchmark_runner(WithPatterns),
         "With hash" => benchmark_runner(WithHash),
         "With hash and patterns" => benchmark_runner(WithHashAndPatterns),
-        "With patterns and macros" => benchmark_runner(WithPatternsAndMacros)
+        "With patterns and macros" => benchmark_runner(WithPatternsAndMacros),
+        "With case" => benchmark_runner(WithCase)
       },
       print: [fast_warning: false]
     )
